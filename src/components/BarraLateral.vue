@@ -20,6 +20,7 @@ export default defineComponent({
     background: blueviolet;
     width: 100%;
     height: 100vh;
+    padding: 1rem;
   }
 @media only screen and (max-width: 768px) {
   header {
