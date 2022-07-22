@@ -37,8 +37,16 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'Formulario',
+  data () {
+    return {
+      tempoEmSegundos: 0
+    }
+  },
   methods: {
     iniciar () {
+      setInterval(() => {
+        this.tempoEmSegundos +=
+      }, 1000)
       console.log('iniciando');
     },
     finalizar () {
