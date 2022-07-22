@@ -12,7 +12,7 @@
         <div class="is-flex is-align-items-center is-justify-content-space-between">4
             <section>
               <strong>
-                {{ tempoEmSegundos }}
+                {{ tempoDecorrido }}
               </strong>
           </section>
           <button class="button" @click="iniciar">
@@ -42,6 +42,11 @@ export default defineComponent({
   data () {
     return {
       tempoEmSegundos: 0
+    }
+  },
+  computed: {
+    tempoDecorrido () : string {
+      return new Date(this.tempoEmSegundos * 1000).toISOString().substr(11,8)
     }
   },
   methods: {
